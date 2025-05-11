@@ -31,6 +31,19 @@
                                 </div>
                             </div>
                         </f:facet>
+
+                        <p:column headerText="Id">
+                            <h:outputText value="#{cliente.id}"/>
+                        </p:column>
+                        <p:column headerText="Nombre">
+                            <h:outputText value="#{cliente.nombre}"/>
+                        </p:column>
+                        <p:column headerText="Apellido">
+                            <h:outputText value="#{cliente.apellido}"/>
+                        </p:column>
+                        <p:column headerText="Membresia">
+                            <h:outputText value="#{cliente.membresia}"/>
+                        </p:column>
                     </p:dataTable>
 
                 </div>
