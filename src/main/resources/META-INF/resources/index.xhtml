@@ -52,6 +52,20 @@
 
                 </div>
             </h:form>
+            <h:form id="forma-modal">
+                <p:dialog header="Detalles Cliente" showEffect="fade"
+                          modal="true" widgetVar="ventanaModalCliente"
+                          responsive="true">
+                    <p:outputPanel id="cliente-ventana" class="ui-fluid">
+                        <div class="field">
+                            <p:outputLabel for="nombre">Nombre</p:outputLabel>
+                            <p:inputText id="nombre"
+                                         value="#{indexControlador.clienteSeleccionado.nombre}"
+                                         required="true"/>
+                        </div>
+                    </p:outputPanel>
+                </p:dialog>
+            </h:form>
         </div>
 
 
