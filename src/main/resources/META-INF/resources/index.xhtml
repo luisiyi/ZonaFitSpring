@@ -63,7 +63,26 @@
                                          value="#{indexControlador.clienteSeleccionado.nombre}"
                                          required="true"/>
                         </div>
+                        <div class="field">
+                            <p:outputLabel for="apellido">Apellido</p:outputLabel>
+                            <p:inputText id="apellido"
+                                         value="#{indexControlador.clienteSeleccionado.apellido}"/>
+                        </div>
+                        <div class="field">
+                            <p:outputLabel for="membresia">Membresia</p:outputLabel>
+                            <p:inputNumber id="membresia"
+                                         value="#{indexControlador.clienteSeleccionado.membresia}"
+                                           required="true"/>
+                        </div>
                     </p:outputPanel>
+                    <f:facet name="footer">
+                        <p:commandButton value="Guardar" icon="pi pi-check"
+                                        process="cliente-ventana @this"
+                                        actionListener="#{indexControlador.guardarCliente}"/>
+                        <p:commandButton value="Cancelar" icon="pi pi-times"
+                                        onclick="PF('ventanaModalCliente').hide()"
+                                        class="ui-button-secondary" type="button"/>
+                    </f:facet>
                 </p:dialog>
             </h:form>
         </div>
