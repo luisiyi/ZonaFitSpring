@@ -48,6 +48,11 @@ public class IndexControlador {
             FacesContext.getCurrentInstance().addMessage(null,
                     new FacesMessage("Cliente Agregado"));
         }
+        //Modificar (update)
+        else{
+            this.clienteServicio.guardarCliente(this.clienteSeleccionado);
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cliente Actualizado"));
+        }
         //Ocultar la ventana modal
         PrimeFaces.current().executeScript("PF('ventanaModalCliente').hide()");
         //Actualizar la tabla usando ajax
